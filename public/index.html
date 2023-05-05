@@ -27,7 +27,18 @@
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
-    <!-- ===============================================-->
+
+    <!--
+ <style>
+      .nav-background {
+        background-image:url(assets/img/illustrations/bg.png);
+        background-size: cover;
+
+        /* Workaround for some mobile browsers */
+        min-height: 100%;
+      }
+    </style>
+  ===============================================-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link href="vendors/prism/prism.css" rel="stylesheet">
@@ -43,22 +54,42 @@
     <!--    Main Content-->
     <!-- ===============================================-->
     <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar fixed-top navbar-dark bg-dark"style=" background-image:url(assets/img/illustrations/bg.png);background-position:left background height:20% >
-  <a class="navbar-brand" href="#">Africonnect</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Products</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </div>
-  </div>
-</nav>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-background">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">aGuideHub</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Navbar text with an inline element
+          </span>
+        </div>
+      </div>
+    </nav>
+
       <section class="py-0">
-        <div class="bg-holder"  center;background-size:auto 816px;">
+        <div class="bg-holder"  center;background-size:auto 350px;">
         </div>
         <!--/.bg-holder-->
 
