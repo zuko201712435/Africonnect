@@ -103,54 +103,21 @@
 </a>
  </div>
             <div>
-              <div class="card card-bg shadow hero-header-form">
-                <div class="card-body>
-                  
-  
-<div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">please provide name:</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="inputPassword3">
-    </div>
-  </div>  
-  <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Cellphone number</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="inputPassword3">
-    </div>
-  </div>
-  <fieldset class="row mb-3">
-    <legend class="col-form-label col-sm-2 pt-0">what kind vehicle insurance would you like?</legend>
-    <div class="col-sm-10">
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-        <label class="form-check-label" for="gridRadios1">
-          auto&general
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-        <label class="form-check-label" for="gridRadios2">
-          Budget insurance 
-        </label>
-      </div>
-      
-  </fieldset>
-  <div class="row mb-3">
-    <div class="col-sm-10 offset-sm-2">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1">
-        <label class="form-check-label" for="gridCheck1">
-          Would you like to receive a phonecall from a financial advisor?
-        </label>
-      </div>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Get a Quote</button>
-
-                </div>
-              </div>
+              
             
+<div ng-app="myApp" ng-controller="formCtrl">
+  <form novalidate>
+    First Name:<br>
+    <input type="text" ng-model="user.firstName"><br>
+    Last Name:<br>
+    <input type="text" ng-model="user.lastName">
+    <br><br>
+    <button ng-click="reset()">RESET</button>
+  </form>
+  <p>form = {{user}}</p>
+  <p>master = {{master}}</p>
+</div>
+
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNm88YpKnA/viewform?embedded=true" frameborder="0" marginheight="100%" marginwidth="0" corner-radius:5px >Loading…</iframe>
          
@@ -182,6 +149,17 @@
 <div data-tf-widget="GVjM1JjE" data-tf-opacity="100" data-tf-hide-headers data-tf-iframe-props="title=Insurance Quote Form (copy)" data-tf-transitive-search-params data-tf-medium="snippet" data-tf-hidden="utm_campaign=" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
- </body>
+
+
+script>
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+  $scope.master = {firstName: "Enter Name", lastName: "Enter surname"};
+  $scope.reset = function() {
+    $scope.user = angular.copy($scope.master);
+  };
+  $scope.reset();
+});
+</script> </body>
 
 </html>
