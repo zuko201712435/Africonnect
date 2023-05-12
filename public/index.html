@@ -366,16 +366,23 @@ Detail:
 <p>class="fs-2 text-400">Store responses in Jason Object </p>
 
 </hgroup>
-<form>
+<form ng-app="FormApp" ng-controller="FormController" >
   <div class="group">
-    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <input type="text" ng-model="name">
+<span class="highlight"></span><span class="bar"></span>
     <label>Name</label>
   </div>
+
   <div class="group">
-    <input type="email"><span class="highlight"></span><span class="bar"></span>
+    <input type="email" ng-model="Email"><span class="highlight"></span><span class="bar"></span>
     <label>Email</label>
   </div>
-  <button type="button" class="button buttonBlue">Subscribe
+
+<input type="text" ng-model="number"><span class="highlight"></span><span class="bar"></span>
+    <label>number</label>
+  </div>
+
+  <button type="button" class="button buttonBlue">Get Quote.
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
 
@@ -421,9 +428,10 @@ Detail:
 <script>
  
 <script>
-angular.
-module('myForm,[]).controller('FormController', ['$scope', function($scope) {
-      $scope.ProspectName = 'EnterName';
-
-    }]);
+var app = angular.module('FormApp', []).controller('FormController, function($scope) {
+  $scope.name = "Zuko";
+  $scope.number = "+27";
+  $scope.email = "@domain.region";
+ 
+});
 </script>    
