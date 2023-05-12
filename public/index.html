@@ -44,7 +44,13 @@
     <link href="assets/css/theme.css" rel="stylesheet" />
     <link href="assets/css/user.css" rel="stylesheet" />
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.map">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script> 
+
   </head>
 
 
@@ -147,20 +153,29 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="vendors/prism/prism.js"></script>
     <script src="assets/js/theme.js"></script>
-<div data-tf-widget="GVjM1JjE" data-tf-opacity="100" data-tf-hide-headers data-tf-iframe-props="title=Insurance Quote Form (copy)" data-tf-transitive-search-params data-tf-medium="snippet" data-tf-hidden="utm_campaign=" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+<div data-tf-widget="GVjM1JjE" data-tf-opacity="100" data-tf-hide-headers data-tf-iframe-props="title=Insurance Quote Form (copy)" data-tf-transitive-search-params data-tf-medium="snippet" data-tf-hidden="utm_campaign=" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.map">
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
 
 
 script>
-var app = angular.module('myApp', []);
-app.controller('formCtrl', function($scope) {
-  $scope.master = {firstName: "Enter Name", lastName: "Enter surname"};
-  $scope.reset = function() {
+var app =
+angular.module('myApp',[])
+.controller('formCtrl', function($scope) 
+{
+  $scope.master = {firstName: "Enter Name", lastName: "Enter surname"
+};
+  $scope.reset = function() 
+{
     $scope.user = angular.copy($scope.master);
-  };
+};
   $scope.reset();
 });
-</script> </body>
+</script> 
+</body>
 
 </html>
