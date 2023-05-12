@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Zuko Luvalo | portfolio</title>
+    <title>Africonnect | Marketing</title>
 
 
     <!-- ===============================================-->
@@ -22,232 +22,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
-    <style >
-
-form {
-	width: 380px;
-	margin: 4em auto;
-	padding: 3em 2em 2em 2em;
-	background: #fafafa;
-	border: 1px solid #ebebeb;
-	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
-}
-
-.group { 
-	position: relative; 
-	margin-bottom: 45px; 
-}
-
-input {
-	font-size: 18px;
-	padding: 10px 10px 10px 5px;
-	-webkit-appearance: none;
-	display: block;
-	background: #fafafa;
-	color: #636363;
-	width: 100%;
-	border: none;
-	border-radius: 0;
-	border-bottom: 1px solid #757575;
-}
-input:focus { outline: none; }
+    <meta name="theme-color" content="#ffffff">
 
 
-/* Label */
+    
 
-.label {
-	color: #999; 
-	font-size: 18px;
-	font-weight: normal;
-	position: absolute;
-	pointer-events: none;
-	left: 5px;
-	top: 10px;
-	transition: all 0.2s ease;
-}
-
-
-input:focus ~ label, input.used ~ label {
-	top: -20px;
-  transform: scale(.75); left: -2px;
-	/* font-size: 14px; */
-	color: #4a89dc;
-}
-
-
-/* Underline */
-
-.bar {
-	position: relative;
-	display: block;
-	width: 100%;
-}
-
-.bar:before, .bar:after {
-	content: '';
-	height: 2px; 
-	width: 0;
-	bottom: 1px; 
-	position: absolute;
-	background: #4a89dc; 
-	transition: all 0.2s ease;
-}
-
-bar:before { left: 50%; }
-
-.bar:after { right: 50%; }
-
-
-/* active */
-
-input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
-
-
-/* Highlight */
-
-.highlight {
-	position: absolute;
-	height: 60%; 
-	width: 100px; 
-	top: 25%; 
-	left: 0;
-	pointer-events: none;
-	opacity: 0.5;
-}
-
-
-/* active */
-
-input:focus ~ .highlight {
-	animation: inputHighlighter 0.3s ease;
-}
-
-
-/* Animations */
-
-@keyframes inputHighlighter {
-	from { background: #4a89dc; }
-	to 	{ width: 0; background: transparent; }
-}
-
-.button {
-  position: relative;
-  display: inline-block;
-  padding: 12px 24px;
-  margin: .3em 0 1em 0;
-  width: 100%;
-  vertical-align: middle;
-  color: #fff;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  letter-spacing: 1px;
-  background: transparent;g: antialiased;
-  text-align: center;
-  letter-spacing: 1px;
-  background: transparent;
-  border: 0;
-  border-bottom: 2px solid #3160B6;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-.button:focus { outline: 0; }
-
-.button:focus { outline: 0; }
-
-buttonBlue {
-  background: #4a89dc;
-  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
-}
-
-.buttonBlue:hover { background: #357bd8; }
-
-
-/* Ripples container */
-
-.ripples {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: transparent;
-}
-
-
-/* Ripples circle */
-
-.ripplesCircle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.ripples.is-active .ripplesCircle {
-  animation: ripples .4s ease-in;
-}
-
-
-
-/* Ripples animation */
-
-@keyframes ripples {
-  0% { opacity: 0; }
-
-  25% { opacity: 1; }
-
-  100% {
-    width: 200%;
-    padding-bottom: 200%;
-    opacity: 0;
-  }
-}
-
-footer { text-align: center; }
-
-footer p {
-	color: #888;
-	font-size: 13px;
-	letter-spacing: .4px;
-}
-
-footer a {
-	color: #4a89dc;
-	text-decoration: none;
-	transition: all .2s ease;
-}
-
-footer a:hover {
-	color: #666;
-	text-decoration: underline;
-}
-
-footer img {
-	width: 80px;
-	transition: all .2s ease;
-}
-
-footer img:hover { opacity: .83; }
-
-footer img:focus , footer a:focus { outline: none; }
-
-
-body * {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-}
-
- .nav-background {
+   
+ <style>
+      .nav-background {
         background-image:url(assets/img/illustrations/bg.png);
         background-size: cover;
+
         /* Workaround for some mobile browsers */
         min-height: 100%;
       }
@@ -259,17 +44,6 @@ body * {
     <link href="assets/css/theme.css" rel="stylesheet" />
     <link href="assets/css/user.css" rel="stylesheet" />
 
-
-<style>
- .my-form {
-   transition:all linear 0.5s;
-   background: transparent;
-
- }
- .my-form.ng-invalid {
-   background: red;
- }
-</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.map">
 </script>
@@ -289,9 +63,7 @@ body * {
       
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-background">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-2023 Portfolio
-</a>
+        <a class="navbar-brand" href="#">GuideHub</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -316,7 +88,7 @@ body * {
             </li>
           </ul>
           <span class="navbar-text">
-            Zuko Luvalo 
+            Vehicle insurance quote 
           </span>
         </div>
       </div>
@@ -325,84 +97,36 @@ body * {
       <section class="py-0">
         <div class="bg-holder"  center;background-size:auto">
         </div>
-
         <!--/.bg-holder-->
 </section>
 
  <div class="container">
           <div class="row align-items-center min-vh-100">
             <div class="col-md-7 col-xl-7 pt-9 text-md-start text-center">
-<label> 
-This is sn example of a marketing campaign.
- </label>
-<p>
-<ol>
-<li>
-I)Vehicle insurance marketing survey.
-Detail:
-</li>
-<li>
-1.Develop Web and email templates for questionnaire.
-</li>
-<li>
-2.Distribute questionnaire via Email and web
-</li>
-<li>
-3.Collect responses.
-</li>
-<li>
-4.Store responses in a Table.</li>
-</ol>
-</p>
-</section>
+              <h1 class="display-2 text-light fw-thin">We provide the best <br class="d-none d-xl-block" />value <strong class="fw-bolder">vehicle insurance </strong></h1>
+              <p class="fs-2 text-400">Take these simple Steps to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p>
+
+<a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span>
+</a>
+ </div>
+            <div>
+              
+            
+<div ng-app="myApp" ng-controller="formCtrl">
+  <form novalidate>
+    First Name:<br>
+    <input type="text" ng-model="user.firstName"><br>
+    Last Name:<br>
+    <input type="text" ng-model="user.lastName">
+    <br><br>
+    <button ng-click="reset()">RESET</button>
+  </form>
+  <p>form = {{user}}</p>
+  <p>master = {{master}}</p>
+</div>
 
 
-        
-
-<hgroup>
-<h2 color="white">Digital Marketing Campaign </h2>
-  <h3 class="display-2 text-light fw-thin>Conduct Survey to collect information on prospective customers who are interested in <br class="d-none d-xl-block" /> Insurance or <strong class="fw-bolder"> income protection services .</strong>
-</h3>
-
-
-</hgroup>
-<form ng-app="FormApp" ng-controller="FormController" >
-
-    <input type="text" ng-model="name">
-<span class="highlight"></span><span class="bar"></span>
-    <label>Name</label>
-
-  
-    <input type="email" ng-model="Email"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
- 
-
-  
-<input type="text" ng-model="number"><span class="highlight"></span><span class="bar">
-</span>
-    <label>number</label>
-  
-<ol>
-<li> name:
-{{name}}
-</li>
-number:
-<li>{{number}}
-</li>
-
-<li>
-email:{{email}}
-</li>
-
-  <button type="button" class="button buttonBlue">Get Quote
-    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-  </button>
-
-
-
- </form>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNm88YpKnA/viewform?" embedded=true" frameborder="0" marginheight="100%" marginwidth="0" corner-radius:5px >Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNm88YpKnA/viewform?embedded=true" frameborder="0" marginheight="100%" marginwidth="0" corner-radius:5px >Loading…</iframe>
          
      
       <!-- <section> close ============================-->
@@ -428,20 +152,25 @@ email:{{email}}
     <script src="vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="vendors/prism/prism.js"></script>
-    <script src="assets/js/theme.js">
+    <script src="assets/js/theme.js"></script>
+<div data-tf-widget="GVjM1JjE" data-tf-opacity="100" data-tf-hide-headers data-tf-iframe-props="title=Insurance Quote Form (copy)" data-tf-transitive-search-params data-tf-medium="snippet" data-tf-hidden="utm_campaign=" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js">
 </script>
 
 
-<script src="//embed.typeform.com/next/embed.js">
-</script>
-
- 
 <script>
-angular.
-module('FormApp',[]).controller('FormController, function($scope) {
-  $scope.name = "Zuko";
-  $scope.number = "+27";
-  $scope.email = "@domain.region";
- 
+var app =
+angular.module('myApp',[])
+.controller('formCtrl', function($scope) 
+{
+  $scope.master = {firstName: "Enter Name", lastName: "Enter surname"
+};
+  $scope.reset = function() 
+{
+    $scope.user = angular.copy($scope.master);
+};
+  $scope.reset();
 });
-</script>    
+</script> 
+</body>
+
+</html>
