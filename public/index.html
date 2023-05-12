@@ -336,7 +336,7 @@ body * {
 This is sn example of a marketing campaign.
  </label>
 <p>
-<ol class="Form-list">
+<ol class="list">
 <li>
 I)Vehicle insurance marketing survey.
 Detail:
@@ -364,7 +364,7 @@ Detail:
 
         
 </hgroup>
-<form name="myForm" ng-controller="FormController" class="my-form">
+<form name="FormExample" ng-controller="FormController">
 
   <div class="group">
 <label> ProspectName: </label>
@@ -380,6 +380,9 @@ ng-show="myForm.input$error.required">Required!</span>
   <code>myForm.$valid = {{myForm.$valid}}</code><br>
   <code>myForm.$error.required = {{!!myForm.$error.required}}</code>
 <br> >
+</div>
+
+  <div class="group">
 <label>ProspectNumber:</label>
 
  <input name="input2" class="highlight" 
@@ -391,8 +394,10 @@ ng-show="myForm.input$error.required">Required!</span>
   <code>myForm.$valid = {{myForm.$valid}}</code><br>
   <code>myForm.$error.required = {{!!myForm.$error.required}}</code>
 <br>
-<label>ProspectEmail: </label>
 
+  </div>
+  <div class="group">
+<label>ProspectEmail: </label>
 <input name="input3" class="highlight"
  ng-model="ProspectEmail" required>
   <span class="error" ng-show="myForm.input3.$error.required">Required!</span><br>
