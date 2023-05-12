@@ -177,6 +177,11 @@ Email Address:<br>
 
 
 <script>
+
+angular.element(function() {
+      angular.bootstrap(document, ['myApp'])
+    });
+
 var app =
 angular.module('myApp',[])
 .controller('formCtrl', function($scope) 
@@ -191,10 +196,10 @@ angular.module('myApp',[])
 });
 
 
-angular.element(function() {
-      angular.bootstrap(document, ['myApp'])
-    });
-}
+
+
+});
+
 </script> 
 
 
