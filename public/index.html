@@ -364,7 +364,7 @@ Detail:
 
         
 </hgroup>
-<form name="FormExample" ng-controller="FormController">
+<form name="myForm" ng-controller="FormController">
 
   <div class="group">
 <label> ProspectName: </label>
@@ -459,8 +459,9 @@ ng-show="myForm.input$error.required">Required!</span>
 <script>
  
 <script>
-  angular.module('formExample', [])
-    .controller('FormController', ['$scope', function($scope) {
+angular.
+module('myForm,[]).controller('FormController', ['$scope', function($scope) {
       $scope.ProspectName = 'EnterName';
+
     }]);
 </script>    
