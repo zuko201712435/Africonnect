@@ -119,9 +119,10 @@
           
               
             
-<div ng-app="myApp" 
+<table ng-app="myApp" 
 ng-controller="formCtrl">
-
+<tr>
+<td>
   <form novalidate>
   Enter  First Name:<br>
     <input type="text" ng-model="user.firstName"><br>
@@ -144,11 +145,12 @@ Enter email address:<br>
 
 <p>form = {{user}}</p>
 
+</td>
+</tr>
 
-<table border="1"  ng-controller="TableCtrl">
  <tr>
 <th>firstName</th>
-        <th>laetname</th>
+        <th>lastname</th>
  <th>Email Address</th>
      <th>number</th>
 </tr>
