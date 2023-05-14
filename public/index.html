@@ -129,7 +129,7 @@
 Enter cell Number:<br>
     <input type="text" 
 ng-model="user.number">
-<br>
+<br><br>
 Enter email address:<br>
     <input type="text" ng-model="user.EmailAddress">
 <br><br>
@@ -194,23 +194,48 @@ angular.module('myApp',[])
   $scope.master = {firstName: "", lastName: "",number:"",EmailAddress 
 };
 
-
-$scope.Replies= [
-{ name: "Zuko",lastName :"Luvalo",number:0724640449, EmailAddress: "zuko201712435@gmail.com" },11
-
-{ name: "Ang", lastName: "Avatar", number:077757849,EmailAddress:"
-zuko201712435@gmail.com" 
-}];
-
-
-  $scope.reset = function() 
+$scope.reset = function() 
 {
     $scope.user = angular.copy($scope.master);
 };
   $scope.reset();
 
+$scope.Replies= [
+{ name: "Zuko",lastName :"Luvalo",number:0724640449, EmailAddress: "zuko201712435@gmail.com" },
+
+{ 
+name: "Ang",
+lastName: "Avatar", 
+number:077757849,
+EmailAddress:"
+zuko201712435@gmail.com" 
+}
+];
+
+$scope.usersTable = new ngTableParams({
+
+page: 1,
+
+count: 5
+
+}, {
+
+total: $scope.Replies.length,
+
+getData: function ($defer, params) {
+
+$scope.data = $scope.Replies.slice((params.page() - 1) * params.count(), params.page() * params.count());
+
+$defer.resolve($scope.data);
+
+}
 
 });
+
+});
+  
+
+
 </script> 
 </body>
 
