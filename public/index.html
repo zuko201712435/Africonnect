@@ -145,7 +145,7 @@ Enter email address:<br>
 <p>form = {{user}}</p>
 </div>
 
-<table border="1" ng-app="myApp2" ng-controller="TableCtrl">
+<table border="1" ng-app="myApp" ng-controller="TableCtrl"l>
  <tr>
 <th>firstName</th>
         <th>laetname</th>
@@ -155,7 +155,7 @@ Enter email address:<br>
 
     <tr ng-repeat="x in replies">
         <td>{{x.Name}}</td>
-        <td>{{x.laetname}}</td>
+        <td>{{x.lastname}}</td>
  <td>{{x.EmailAddress}}</td>
      <td>{{x.number}}</td>
     
@@ -232,9 +232,8 @@ zuko201712435@gmail.com"
 });
 });
 
-var app2 =
-angular.module('myApp2',[])
-.controller('tblCtrl', function($scope) 
+
+app.controller('tblCtrl', function($scope) 
 {
 
 $scope.Replies= 
