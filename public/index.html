@@ -137,24 +137,28 @@ Enter email address:<br>
     <button ng-click="reset()">RESET</button>
 
   </form>
-<table ng-table ="replies" class="table table-striped">
-
-<tr ng-repeat="user in data">
-
-<td data-title="'Name'">{{user.firstName}}</td>
-
-<td data-title=" 'EmailAddress"
->{{user.EmailAddress}}</td>
-
-<td data-title="'cellphone number">{{user.number}}</td>
-
-</tr>
-</table>  <p>form = {{user}}</p>
   <p>master = {{master}}</p>
-</div>
+
+  
+<p>form = {{user}}</p></div>
 </form>
 
-<iframe src="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNA/viewform?embedded=true" frameborder="0" marginheight="100%" marginwidth="0" corner-radius:5px >Loading…
+<iframe 
+<table ng-table ="usersTable" class="table table-striped">
+
+<tr ng-repeat="replies in data">
+
+<td data-title="'Name'">{replies.firstName}}</td>
+
+<td data-title=" 'EmailAddress"
+>{replies.EmailAddress}}</td>
+
+<td data-title="'cellphone number">{{replies.number}}</td>
+
+</tr>
+</table>
+<iframe 
+lsrc="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNA/viewform?embedded=true" frameborder="0" marginheight="100%" marginwidth="0" corner-radius:5px >Loading…
 </iframe>
          
      
@@ -201,7 +205,8 @@ $scope.reset = function()
   $scope.reset();
 
 $scope.Replies= [
-{ name: "Zuko",lastName :"Luvalo",number:0724640449, EmailAddress: "zuko201712435@gmail.com" },
+{ name: "Zuko",lastName :"Luvalo",number:0724640449, EmailAddress: "zuko201712435@gmail.com" 
+},
 
 { 
 name: "Ang",
