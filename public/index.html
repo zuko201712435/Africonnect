@@ -132,9 +132,24 @@ ng-model="user.number">
 <br>
 Enter email address:<br>
     <input type="text" ng-model="user.EmailAddress">
+<br><br>
+
     <button ng-click="reset()">RESET</button>
+
   </form>
-  <p>form = {{user}}</p>
+<table ng-table ="replies" class="table table-striped">
+
+<tr ng-repeat="user in data">
+
+<td data-title="'Name'">{{user.firstName}}</td>
+
+<td data-title=" 'EmailAddress"
+>{{user.EmailAddress}}</td>
+
+<td data-title="'cellphone number">{{user.number}}</td>
+
+</tr>
+</table>  <p>form = {{user}}</p>
   <p>master = {{master}}</p>
 </div>
 </form>
@@ -176,13 +191,25 @@ var app =
 angular.module('myApp',[])
 .controller('formCtrl', function($scope) 
 {
-  $scope.master = {firstName: "Enter Name", lastName: "Enter surname"
+  $scope.master = {firstName: "", lastName: "",number:"",EmailAddress 
 };
+
+
+$scope.Replies= [
+{ name: "Zuko",lastName :"Luvalo",number:0724640449, EmailAddress: "zuko201712435@gmail.com" },11
+
+{ name: "Ang", lastName: "Avatar", number:077757849,EmailAddress:"
+zuko201712435@gmail.com" 
+}];
+
+
   $scope.reset = function() 
 {
     $scope.user = angular.copy($scope.master);
 };
   $scope.reset();
+
+
 });
 </script> 
 </body>
