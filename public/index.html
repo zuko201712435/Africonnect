@@ -116,14 +116,18 @@
 <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span>
 </a>
  </div>
-          
+            <div>
               
             
-<table ng-app="myApp" 
-ng-controller="formCtrl">
+<table ng-app="myApp" ng-controller="formCtrl">
+  
+    <tr ng-repeat="x in records">
+        <td>{{x.Name}}</td>
+        <td>{{x.Country}}</td>
+    </tr>
 <tr>
 <td>
-  <form novalidate>
+<form novalidate>
   Enter  First Name:<br>
     <input type="text" ng-model="user.firstName"><br>
    Enter Last Name:<br>
@@ -132,43 +136,19 @@ ng-controller="formCtrl">
 Enter cell Number:<br>
     <input type="text" 
 ng-model="user.number">
-<br><br>
+11<br>
 Enter email address:<br>
     <input type="text" ng-model="user.EmailAddress">
-<br><br>
-
-
     <button ng-click="reset()">RESET</button>
-
   </form>
+  <p>form = {{user}}</p>
   <p>master = {{master}}</p>
-
-<p>form = {{user}}</p>
-
 </td>
 </tr>
-
- <tr>
-<th>firstName</th>
-        <th>lastname</th>
- <th>Email Address</th>
-     <th>number</th>
-</tr>
-
-    <tr ng-repeat="x in replies">
-        <td>{{x.Name}}</td>
-        <td>{{x.lastname}}</td>
- <td>{{x.EmailAddress}}</td>
-     <td>{{x.number}}</td>
-    
-    </tr>
 </table>
 
 
-</div>
-
-<iframe 
-src="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNA/viewform?embedded=true" frameborder="0" marginheight="100%" marginwidth="0" corner-radius:5px >Loading…
+<iframe src="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNA/viewform?embedded=true" frameborder="0" -radius:5px >Loading…
 </iframe>
          
      
@@ -177,7 +157,6 @@ src="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE
 
 
     </main>
-</body>
     <!-- ===============================================-->
     <!--    End of Main Content-->
     <!-- ===============================================-->
@@ -205,61 +184,30 @@ src="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE
 var app =
 angular.module('myApp',[])
 .controller('formCtrl', function($scope) 
-{
-  $scope.master = 
-{firstName: "", lastName: "",number:"",EmailAddress 
+{  
+$scope.records = [
+       {
+            "Name" : "Alfreds Futterkiste",
+            "Country" : "Germany"
+        },{
+            "Name" : "Berglunds snabbköp",
+            "Country" : "Sweden"
+        },{
+            "Name" : "Centro comercial Moctezuma",
+            "Country" : "Mexico"
+        },{
+            "Name" : "Ernst Handel",
+            "Country" : "Austria"
+        }
+    ];
+  $scope.master = {firstName: "Enter Name", lastName: "Enter surname"
 };
-
-$scope.reset = function() 
+  $scope.reset = function() 
 {
     $scope.user = angular.copy($scope.master);
 };
   $scope.reset();
-
-$scope.Replies= [
-{ name: "Zuko",lastName :"Luvalo",number:0724640449, EmailAddress: "zuko201712435@gmail.com" 
-},
-
-{ 
-name: "Ang",
-lastName: "Avatar", 
-number:077757849,
-EmailAddress:"
-zuko201712435@gmail.com" 
-}
-];
-
-
-
 });
-});
-
-
-app.controller('tblCtrl', function($scope) 
-{
-
-$scope.Replies= 
-[{ 
-name: "Ang",
-lastName: "Avatar", 
-number:077757849,
-EmailAddress:"
-zuko201712435@gmail.com"
-}
-,
-{
-name:"$$$$$",
-lastName: "Abar", 
-number:077757849,
-EmailAddress:"
-dko201712435@gmail.com" 
-}]
-
-
-
-});  
-
-
 </script> 
 </body>
 
