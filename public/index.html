@@ -119,7 +119,9 @@
           
               
             
-<div ng-app="myApp" ng-controller="formCtrl">
+<div ng-app="myApp" 
+ng-controller="formCtrl">
+
   <form novalidate>
   Enter  First Name:<br>
     <input type="text" ng-model="user.firstName"><br>
@@ -141,10 +143,10 @@ Enter email address:<br>
   <p>master = {{master}}</p>
 
 <p>form = {{user}}</p>
+</div>
 
-
-<table border="1">
-<tr>
+<table border="1" ng-app="myApp2" ng-controller="TableCtrl">
+ <tr>
 <th>firstName</th>
         <th>laetname</th>
  <th>Email Address</th>
@@ -152,19 +154,19 @@ Enter email address:<br>
 </tr>
 
     <tr ng-repeat="x in replies">
-        <td>{{x.firstName}}</td>
+        <td>{{x.Name}}</td>
         <td>{{x.laetname}}</td>
  <td>{{x.EmailAddress}}</td>
      <td>{{x.number}}</td>
     
     </tr>
 </table>
-</div>
+
 
 
 
 <iframe 
-lsrc="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNA/viewform?embedded=true" frameborder="0" marginheight="100%" marginwidth="0" corner-radius:5px >Loading…
+src="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNA/viewform?embedded=true" frameborder="0" marginheight="100%" marginwidth="0" corner-radius:5px >Loading…
 </iframe>
          
      
@@ -229,7 +231,32 @@ zuko201712435@gmail.com"
 
 });
 });
-  
+
+var app2 =
+angular.module('myApp2',[])
+.controller('tblCtrl', function($scope) 
+{
+
+$scope.Replies= 
+[{ 
+name: "Ang",
+lastName: "Avatar", 
+number:077757849,
+EmailAddress:"
+zuko201712435@gmail.com"
+}
+,
+{
+name:"$$$$$",
+lastName: "Abar", 
+number:077757849,
+EmailAddress:"
+dko201712435@gmail.com" 
+}]
+
+
+
+});  
 
 
 </script> 
