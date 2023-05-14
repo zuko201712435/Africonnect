@@ -116,7 +116,7 @@
 <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span>
 </a>
  </div>
-          <form>
+          
               
             
 <div ng-app="myApp" ng-controller="formCtrl">
@@ -134,7 +134,16 @@ Enter email address:<br>
     <input type="text" ng-model="user.EmailAddress">
 <br><br>
 
-<table ng-controller="formCtrl" border="1">
+
+    <button ng-click="reset()">RESET</button>
+
+  </form>
+  <p>master = {{master}}</p>
+
+<p>form = {{user}}</p>
+
+
+table ng-controller="formCtrl" border="1">
 <tr>
 <th>firstName</th>
         <th>laetname</th>
@@ -142,7 +151,7 @@ Enter email address:<br>
      <th>number</th>
 </tr>
 
-    <tr ng-repeat="x in user">
+    <tr ng-repeat="x in replies">
         <td>{{x.firstName}}</td>
         <td>{{x.laetname}}</td>
  <td>{{x.EmailAddress}}</td>
@@ -150,14 +159,8 @@ Enter email address:<br>
     
     </tr>
 </table>
-    <button ng-click="reset()">RESET</button>
+</div>
 
-  </form>
-  <p>master = {{master}}</p>
-
-  
-<p>form = {{user}}</p></div>
-</form>
 
 
 <iframe 
