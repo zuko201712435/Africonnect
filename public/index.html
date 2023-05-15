@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
@@ -116,14 +114,24 @@
 <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span>
 </a>
  </div>
-            <div>
+            
               
             
 <table ng-app="myApp" ng-controller="formCtrl">
-  
+   <tr ng-repeat="(key, value) in master">
+          
+    
+        <td>{{x.firstName}}</td>
+        <td>{{x.lastname}}</td>
+        <td>{{x.EmailAddress}}</td>
+        <td>{{x.number}}</td>
+    </tr>
+
     <tr ng-repeat="x in records">
         <td>{{x.Name}}</td>
-        <td>{{x.Country}}</td>
+        <td>{{x.lastname}}</td>
+        <td>{{x.EmailAddress}}</td>
+        <td>{{x.number}}</td>
     </tr>
 <tr>
 <td>
@@ -175,6 +183,7 @@ Enter email address:<br>
     <script src="vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="vendors/prism/prism.js"></script>
+
     <script src="assets/js/theme.js"></script>
 <div data-tf-widget="GVjM1JjE" data-tf-opacity="100" data-tf-hide-headers data-tf-iframe-props="title=Insurance Quote Form (copy)" data-tf-transitive-search-params data-tf-medium="snippet" data-tf-hidden="utm_campaign=" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js">
 </script>
@@ -187,23 +196,39 @@ angular.module('myApp',[])
 {  
 $scope.records = [
        {
-            "Name" : "Alfreds Futterkiste",
-            "Country" : "Germany"
+       
+       "Name" : "Alfreds",
+       "lastName" : "Futterkiste",
+       "number":"0724640449",
+       "EmailAddress":"Zuko201712435@gmail.com"
+
         },{
-            "Name" : "Berglunds snabbköp",
-            "Country" : "Sweden"
+       "Name" : "freds",
+       "lastName" : "Kirste",
+       "number":"0724640449",
+       "EmailAddress":"Zuko20171@gmail.com"
+
         },{
-            "Name" : "Centro comercial Moctezuma",
-            "Country" : "Mexico"
+       "Name" : "Alfredo",
+       "lastName" : "Futter",
+       "number":"0724640449",
+       "EmailAddress":"Zuko201712435@gmail.com"
+
         },{
-            "Name" : "Ernst Handel",
-            "Country" : "Austria"
-        }
-    ];
-  $scope.master = {firstName: "Enter Name", lastName: "Enter surname"
+           
+       "Name" : "Alfred",
+       "lastName" : "Foker",
+       "number":"0724640449",
+       "EmailAddress":"Zuko201712435@gmail.com"
+  }];
+  $scope.master = {
+firstName: "", 
+lastName: "",
+number:"0",
+EmailAddress:"zuko201712435@gmail.com"
 };
   $scope.reset = function() 
-{
+ppp⁷y7 {
     $scope.user = angular.copy($scope.master);
 };
   $scope.reset();
