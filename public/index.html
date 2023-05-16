@@ -118,13 +118,13 @@
               
             
 <table ng-app="myApp" ng-controller="formCtrl">
-   <tr ng-repeat="(key, value) in master">
+   <tr ng-repeat="item in master">
           
     
-        <td>{{x.firstName}}</td>
-        <td>{{x.lastname}}</td>
-        <td>{{x.EmailAddress}}</td>
-        <td>{{x.number}}</td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastname}}</td>
+        <td>{{item.EmailAddress}}</td>
+        <td>{{item.number}}</td>
     </tr>
 
     <tr ng-repeat="x in records">
@@ -142,9 +142,10 @@
     <input type="text" ng-model="user.lastName">
     <br><br>
 Enter cell Number:<br>
-    <input type="text" 
+    <input type="text"  
 ng-model="user.number">
-11<br>
+<br>
+
 Enter email address:<br>
     <input type="text" ng-model="user.EmailAddress">
     <button ng-click="reset()">RESET</button>
@@ -221,17 +222,21 @@ $scope.records = [
        "number":"0724640449",
        "EmailAddress":"Zuko201712435@gmail.com"
   }];
+
   $scope.master = {
 firstName: "", 
 lastName: "",
 number:"0",
 EmailAddress:"zuko201712435@gmail.com"
 };
+
   $scope.reset = function() 
-ppp⁷y7 {
+ {
     $scope.user = angular.copy($scope.master);
 };
+
   $scope.reset();
+
 });
 </script> 
 </body>
