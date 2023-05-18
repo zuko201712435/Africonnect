@@ -158,7 +158,9 @@ ng-model="user.number">
 
 Enter email address:<br>
     <input type="text" ng-model="user.EmailAddress">
-    <button ng-click="reset()">RESET</button>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
   </form>
   <p>form = {{user}}</p>
   <p>master = {{master}}</p>
@@ -246,7 +248,22 @@ EmailAddress:"zuko201712435@gmail.com"
 };
 
   $scope.reset();
-
+$scope.submitForm = function() {
+        $http({
+          method  : 'POST',
+          url     : 'http://example.com/clone.php',
+          data    : $scope.master,
+          headers : { 'Content-Type': 'application/x-www-form-urlencoded' } 
+         })
+          .success(function(data) {
+            if (data.errors) {
+              $scope.errorName = data.errors.firstName;
+              $scope.errorFirstName = data.errors.firstName;
+              $scope.errorEmail = data.errors.EmailAddress;
+            } else {
+              $scope.message = data.message;
+            }
+         });
 });
 </script> 
 </body>
