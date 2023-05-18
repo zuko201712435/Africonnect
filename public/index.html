@@ -27,13 +27,26 @@
 
    
  <style>
-      .nav-background {
+
+table, th, td {
+border: 1px solid grey;
+border-collapse: collapse;
+padding: 5px;
+}
+table tr:nth-child(odd) {
+background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+background-color: #ffffff;
+}
+
+.nav-background {
         background-image:url(assets/img/illustrations/bg.png);
         background-size: cover;
 
         /* Workaround for some mobile browsers */
         min-height: 100%;
-      }
+}
    form { 
          width: 380px; 
          margin: 4em auto; 
