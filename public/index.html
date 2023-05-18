@@ -248,23 +248,7 @@ EmailAddress:"zuko201712435@gmail.com"
 };
 
   $scope.reset();
-$scope.submitForm = function() {
-        $http({
-          method  : 'POST',
-          url     : 'http://example.com/clone.php',
-          data    : $scope.master,
-          headers : { 'Content-Type': 'application/x-www-form-urlencoded' } 
-         })
-          .success(function(data) {
-            if (data.errors) {
-              $scope.errorName = data.errors.firstName;
-              $scope.errorFirstName = data.errors.firstName;
-              $scope.errorEmail = data.errors.EmailAddress;
-            } else {
-              $scope.message = data.message;
-            }
-}
-         });
+
 });
 </script> 
 </body>
