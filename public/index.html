@@ -221,7 +221,7 @@ angular.module('myApp',[])
 .controller('formCtrl', function($scope,$http) 
 {  
 var url
-="https://github.com/zuko201712435/Africonnect/blob/6900ae3c664bcbd26f254fe1ff97f3f890dd15f0/public/Data/tableConvert.com_3pyhg9.json";
+="public/Data/Contacts.txt";
 
             $http.get(url).success(function (response) {
                 $scope.records = response;
