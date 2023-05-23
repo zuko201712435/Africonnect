@@ -209,8 +209,11 @@ Enter email address:<br>
 <script>
 var app =
 angular.module('myApp',[])
-.controller('formCtrl', function($scope) 
-{  
+.controller('formCtrl', function($scope,$http) 
+{ 
+$http.get("public/Data/tableConvert.com_3pyhg9.json").then(function(response) {
+
+    $scope.myData = response.data.records;
 $scope.records = [
        {
        
