@@ -158,6 +158,15 @@
 <td>{{X.SENIORITY}}</td>
     </tr>
 <tr>
+<div data-pagination=""
+         data-num-pages="numOfPages()"
+         data-current-page="curPage"
+         data-max-size="maxSize"
+         data-boundary-links="true">
+    </div>
+</tr>
+
+<tr>
 <td>
 </td>
 
@@ -231,13 +240,24 @@ angular.module('myApp',[])
 .controller('formCtrl', function($scope) 
 {  
 
-    $scope.MDTbl= {
-         "box-shadow" : "0 0 20px rgba(0,0,0,0.1)",
-        "color" : "white",
-        "background-color" : "coral"
-
-        
-    };
+    $scope.curPage = 1,
+          $scope.itemsPerPage = 3,
+          $scope.maxSize =5;
+ 
+      this.items =records;
+ 
+      $scope.numOfPages = function () {
+          return Math.ceil(records.length / $scope.itemsPerPage);
+ 
+      };
+ 
+      $scope.$watch('curPage + numPerPage', function () {
+          var begin = (($scope.curPage - 1) * $scope.itemsPerPage),
+              end = begin + $scope.itemsPerPage;
+ 
+          $scope.filteredItems = records.slice(begin, end);
+      });
+  });
 
 $scope.records = [
                { 
