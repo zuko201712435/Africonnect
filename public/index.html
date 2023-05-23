@@ -29,6 +29,22 @@
    
  <style>
 
+ 
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+
 
 
       .nav-background {
@@ -38,6 +54,7 @@
         /* Workaround for some mobile browsers */
         min-height: 100%;
       }
+
    form { 
          width: 380px; 
          margin: 4em auto; 
@@ -121,7 +138,7 @@
             
               
             
-<table ng-app="myApp" ng-controller="formCtrl" class="responsive-table">
+<table ng-app="myApp" ng-controller="formCtrl" ng-style="MDTbl">
 
    
     <tr ng-repeat="x in records">
@@ -205,6 +222,17 @@ var app =
 angular.module('myApp',[])
 .controller('formCtrl', function($scope) 
 {  
+
+    $scope.MDTbl= {
+border: 1px solid blue;
+         
+         
+        "color" : "white",
+        "background-color" : "coral",
+        "font-size" : "60px",
+        "padding" : "50px"
+    }
+
 $scope.records = [
                { 
              "FULL NAME": "Adelle Loots", 
