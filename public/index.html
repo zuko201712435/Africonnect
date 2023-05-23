@@ -211,9 +211,13 @@ var app =
 angular.module('myApp',[])
 .controller('formCtrl', function($scope,$http) 
 { 
-$http.get("public/Data/tableConvert.com_3pyhg9.json").then(function(response) {
+$http.get("public/Data/tableConvert.com_3pyhg9.json").then(function(response) 
+{
 
-    $scope.myData = response.data.records;
+    $scope.myData = response.data;
+};
+
+
 $scope.records = [
        {
        
