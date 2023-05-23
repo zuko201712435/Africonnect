@@ -41,16 +41,17 @@
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even){background-color: #4285F4;}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {background-color: #e1f5fe;}
 
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
-  color: white;
+  background-color: #00e5ff;
+  color: black;
+font-weight:2
 }
 
 
@@ -151,7 +152,7 @@
 <p><input type="text" ng-model="test"></p>
 </th>
    
-    <tr ng-repeat="x in records |limitTo: -5|filter : test">
+    <tr ng-repeat="x in records |limitTo: 10|filter : test">
 <td>{{ $index + 1 }}</td>
         <td>{{x.FNAME}}</td>
         <td>{{x.LNAME}}</td>
