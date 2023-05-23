@@ -147,9 +147,12 @@
               
             
 <table ng-app="myApp" ng-controller="formCtrl" id="customers">
-
+<th>
+<p><input type="text" ng-model="test"></p>
+</th>
    
-    <tr ng-repeat="x in records">
+    <tr ng-repeat="x in records |limitTo: -5|filter : test">
+<td>{{ $index + 1 }}</td>
         <td>{{x.FNAME}}</td>
         <td>{{x.LNAME}}</td>
         <td>{{x.EMAIL}}</td>
