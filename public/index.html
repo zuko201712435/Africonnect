@@ -209,8 +209,19 @@ Enter email address:<br>
 <script>
 var app =
 angular.module('myApp',[])
-.controller('formCtrl', function($scope) 
+.controller('formCtrl', function($scope,$http) 
 {  
+
+$http.get("
+https://github.com/zuko201712435/Africonnect/blob/6900ae3c664bcbd26f254fe1ff97f3f890dd15f0/public/Data/tableConvert.com_3pyhg9.json
+")
+.then(
+function(response) 
+{
+    $scope.users= response.data.data;
+});
+
+
 $scope.records = [
        {
        
