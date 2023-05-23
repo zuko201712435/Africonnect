@@ -211,44 +211,15 @@ var app =
 angular.module('myApp',[])
 .controller('formCtrl', function($scope,$http) 
 {  
+var url
+="https://github.com/zuko201712435/Africonnect/blob/6900ae3c664bcbd26f254fe1ff97f3f890dd15f0/public/Data/tableConvert.com_3pyhg9.json";
 
-$http.get("
-https://github.com/zuko201712435/Africonnect/blob/6900ae3c664bcbd26f254fe1ff97f3f890dd15f0/public/Data/tableConvert.com_3pyhg9.json
-")
-.then(
-function(response) 
-{
-    $scope.users= response.data.data;
-});
+            $http.get(url).success(function (response) {
+                $scope.records = response;
+            });
 
 
-$scope.records = [
-       {
-       
-       "Name" : "Alfreds",
-       "lastName" : "Futterkiste",
-       "number":"0724640449",
-       "EmailAddress":"Zuko201712435@gmail.com"
 
-        },{
-       "Name" : "freds",
-       "lastName" : "Kirste",
-       "number":"0724640449",
-       "EmailAddress":"Zuko20171@gmail.com"
-
-        },{
-       "Name" : "Alfredo",
-       "lastName" : "Futter",
-       "number":"0724640449",
-       "EmailAddress":"Zuko201712435@gmail.com"
-
-        },{
-           
-       "Name" : "Alfred",
-       "lastName" : "Foker",
-       "number":"0724640449",
-       "EmailAddress":"Zuko201712435@gmail.com"
-  }];
 
   $scope.master = {
 firstName: "", 
