@@ -145,10 +145,12 @@ font-weight:2
 <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span>
 </a>
  </div>
-            
+            <input id="chbhide"
+               type="checkbox"
+               ng-model="hide" />
               
             
-<table ng-app="myApp" ng-controller="formCtrl" id="customers">
+<table ng-app="myApp" ng-controller="formCtrl" id="customers" ng-hide="hide">
 <th>
 <p><input type="text" ng-model="test"></p>
 </th>
