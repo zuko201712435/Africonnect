@@ -145,7 +145,29 @@ font-weight:2
               </a>
             </div>
 
-   
+               
+<table ng-app="myApp" ng-controller="formCtrl" id="customers" ng-hide="hide">
+  <th>
+  <p><input type="text" ng-model="test"></p>
+  <br>
+  <input id="chbhide"
+  type="checkbox"
+  ng-model="test" />
+  
+  </th>
+     
+      <tr ng-repeat="x in records |limitTo: 100|filter : test">
+  <td>{{ $index + 1 }}</td>
+          <td>{{x.rank}}</td>
+          <td>{{x.covertype}}</td>
+          <td>{{x.cashbenefits}}</td>
+          <td>{{X.Age}}</td>
+  <td>{{X.CashBackBenefit}}</td>
+  <td>{{X.TotalPremiums}}</td>
+      </tr>
+  
+  </table>
+  
 
 <iframe src="https://docs.google.com/forms/d/e1FAIpQLeSf6vXusB1Qbi0ve8-ZVRnAL_kd133NGSKE55qXdxNA/viewform?embedded=true" frameborder="0" -radius:5px >Loading…
 </iframe>
@@ -186,6 +208,2682 @@ angular.module('myApp',[])
 .controller('formCtrl', function($scope) 
 {  
 
+    
+$scope.records = [
+    {
+        "rank": "1,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "20",
+        "Premium": "275",
+        "CashBackBenefit": "32",
+        "TotalPremiums": "307"
+    },
+    {
+        "rank": "2,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "21",
+        "Premium": "280",
+        "CashBackBenefit": "40",
+        "TotalPremiums": "315"
+    },
+    {
+        "rank": "3,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "22",
+        "Premium": "285",
+        "CashBackBenefit": "48",
+        "TotalPremiums": "327"
+    },
+    {
+        "rank": "4,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "23",
+        "Premium": "290",
+        "CashBackBenefit": "56",
+        "TotalPremiums": "338"
+    },
+    {
+        "rank": "5,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "24",
+        "Premium": "295",
+        "CashBackBenefit": "64",
+        "TotalPremiums": "345"
+    },
+    {
+        "rank": "6,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "25",
+        "Premium": "300",
+        "CashBackBenefit": "72",
+        "TotalPremiums": "350"
+    },
+    {
+        "rank": "7,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "26",
+        "Premium": "305",
+        "CashBackBenefit": "80",
+        "TotalPremiums": "355"
+    },
+    {
+        "rank": "8,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "27",
+        "Premium": "310",
+        "CashBackBenefit": "88",
+        "TotalPremiums": "360"
+    },
+    {
+        "rank": "9,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "28",
+        "Premium": "315",
+        "CashBackBenefit": "96",
+        "TotalPremiums": "365"
+    },
+    {
+        "rank": "10,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "29",
+        "Premium": "320",
+        "CashBackBenefit": "104",
+        "TotalPremiums": "370"
+    },
+    {
+        "rank": "11,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "30",
+        "Premium": "325",
+        "CashBackBenefit": "112",
+        "TotalPremiums": "375"
+    },
+    {
+        "rank": "12,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "31",
+        "Premium": "330",
+        "CashBackBenefit": "120",
+        "TotalPremiums": "380"
+    },
+    {
+        "rank": "13,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "32",
+        "Premium": "335",
+        "CashBackBenefit": "128",
+        "TotalPremiums": "385"
+    },
+    {
+        "rank": "14,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "33",
+        "Premium": "340",
+        "CashBackBenefit": "136",
+        "TotalPremiums": "390"
+    },
+    {
+        "rank": "15,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "34",
+        "Premium": "345",
+        "CashBackBenefit": "144",
+        "TotalPremiums": "395"
+    },
+    {
+        "rank": "16,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "35",
+        "Premium": "350",
+        "CashBackBenefit": "152",
+        "TotalPremiums": "400"
+    },
+    {
+        "rank": "17,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "36",
+        "Premium": "355",
+        "CashBackBenefit": "160",
+        "TotalPremiums": "405"
+    },
+    {
+        "rank": "18,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "37",
+        "Premium": "360",
+        "CashBackBenefit": "168",
+        "TotalPremiums": "410"
+    },
+    {
+        "rank": "19,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "38",
+        "Premium": "365",
+        "CashBackBenefit": "176",
+        "TotalPremiums": "415"
+    },
+    {
+        "rank": "20,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "39",
+        "Premium": "370",
+        "CashBackBenefit": "184",
+        "TotalPremiums": "420"
+    },
+    {
+        "rank": "21,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "40",
+        "Premium": "375",
+        "CashBackBenefit": "192",
+        "TotalPremiums": "425"
+    },
+    {
+        "rank": "22,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "41",
+        "Premium": "380",
+        "CashBackBenefit": "200",
+        "TotalPremiums": "430"
+    },
+    {
+        "rank": "23,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "42",
+        "Premium": "385",
+        "CashBackBenefit": "208",
+        "TotalPremiums": "435"
+    },
+    {
+        "rank": "24,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "43",
+        "Premium": "390",
+        "CashBackBenefit": "216",
+        "TotalPremiums": "440"
+    },
+    {
+        "rank": "25,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "44",
+        "Premium": "395",
+        "CashBackBenefit": "224",
+        "TotalPremiums": "445"
+    },
+    {
+        "rank": "26,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "45",
+        "Premium": "400",
+        "CashBackBenefit": "232",
+        "TotalPremiums": "450"
+    },
+    {
+        "rank": "27,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "46",
+        "Premium": "405",
+        "CashBackBenefit": "240",
+        "TotalPremiums": "455"
+    },
+    {
+        "rank": "28,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "47",
+        "Premium": "410",
+        "CashBackBenefit": "248",
+        "TotalPremiums": "460"
+    },
+    {
+        "rank": "29,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "48",
+        "Premium": "415",
+        "CashBackBenefit": "256",
+        "TotalPremiums": "465"
+    },
+    {
+        "rank": "30,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "49",
+        "Premium": "420",
+        "CashBackBenefit": "264",
+        "TotalPremiums": "470"
+    },
+    {
+        "rank": "31,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "50",
+        "Premium": "425",
+        "CashBackBenefit": "272",
+        "TotalPremiums": "475"
+    },
+    {
+        "rank": "32,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "51",
+        "Premium": "430",
+        "CashBackBenefit": "280",
+        "TotalPremiums": "480"
+    },
+    {
+        "rank": "33,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "52",
+        "Premium": "435",
+        "CashBackBenefit": "288",
+        "TotalPremiums": "485"
+    },
+    {
+        "rank": "34,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "53",
+        "Premium": "440",
+        "CashBackBenefit": "296",
+        "TotalPremiums": "490"
+    },
+    {
+        "rank": "35,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "54",
+        "Premium": "445",
+        "CashBackBenefit": "304",
+        "TotalPremiums": "495"
+    },
+    {
+        "rank": "36,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "55",
+        "Premium": "450",
+        "CashBackBenefit": "312",
+        "TotalPremiums": "500"
+    },
+    {
+        "rank": "37,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "56",
+        "Premium": "455",
+        "CashBackBenefit": "320",
+        "TotalPremiums": "505"
+    },
+    {
+        "rank": "38,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "57",
+        "Premium": "460",
+        "CashBackBenefit": "328",
+        "TotalPremiums": "510"
+    },
+    {
+        "rank": "39,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "58",
+        "Premium": "465",
+        "CashBackBenefit": "336",
+        "TotalPremiums": "515"
+    },
+    {
+        "rank": "40,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "59",
+        "Premium": "470",
+        "CashBackBenefit": "344",
+        "TotalPremiums": "520"
+    },
+    {
+        "rank": "41,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "60",
+        "Premium": "475",
+        "CashBackBenefit": "352",
+        "TotalPremiums": "525"
+    },
+    {
+        "rank": "42,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "61",
+        "Premium": "480",
+        "CashBackBenefit": "360",
+        "TotalPremiums": "530"
+    },
+    {
+        "rank": "43,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "62",
+        "Premium": "485",
+        "CashBackBenefit": "368",
+        "TotalPremiums": "535"
+    },
+    {
+        "rank": "44,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "63",
+        "Premium": "490",
+        "CashBackBenefit": "376",
+        "TotalPremiums": "540"
+    },
+    {
+        "rank": "45,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "64",
+        "Premium": "495",
+        "CashBackBenefit": "384",
+        "TotalPremiums": "545"
+    },
+    {
+        "rank": "46,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "65",
+        "Premium": "500",
+        "CashBackBenefit": "392",
+        "TotalPremiums": "550"
+    },
+    {
+        "rank": "47,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "66",
+        "Premium": "505",
+        "CashBackBenefit": "400",
+        "TotalPremiums": "555"
+    },
+    {
+        "rank": "48,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "67",
+        "Premium": "510",
+        "CashBackBenefit": "408",
+        "TotalPremiums": "560"
+    },
+    {
+        "rank": "49,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "68",
+        "Premium": "515",
+        "CashBackBenefit": "416",
+        "TotalPremiums": "565"
+    },
+    {
+        "rank": "50,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "69",
+        "Premium": "520",
+        "CashBackBenefit": "424",
+        "TotalPremiums": "570"
+    },
+    {
+        "rank": "51,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "70",
+        "Premium": "525",
+        "CashBackBenefit": "432",
+        "TotalPremiums": "575"
+    },
+    {
+        "rank": "52,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "71",
+        "Premium": "530",
+        "CashBackBenefit": "440",
+        "TotalPremiums": "580"
+    },
+    {
+        "rank": "53,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "72",
+        "Premium": "535",
+        "CashBackBenefit": "448",
+        "TotalPremiums": "585"
+    },
+    {
+        "rank": "54,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "73",
+        "Premium": "540",
+        "CashBackBenefit": "456",
+        "TotalPremiums": "590"
+    },
+    {
+        "rank": "55,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "74",
+        "Premium": "545",
+        "CashBackBenefit": "464",
+        "TotalPremiums": "595"
+    },
+    {
+        "rank": "56,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "75",
+        "Premium": "550",
+        "CashBackBenefit": "472",
+        "TotalPremiums": "600"
+    },
+    {
+        "rank": "57,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "76",
+        "Premium": "555",
+        "CashBackBenefit": "480",
+        "TotalPremiums": "605"
+    },
+    {
+        "rank": "58,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "77",
+        "Premium": "560",
+        "CashBackBenefit": "488",
+        "TotalPremiums": "610"
+    },
+    {
+        "rank": "59,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "78",
+        "Premium": "565",
+        "CashBackBenefit": "496",
+        "TotalPremiums": "615"
+    },
+    {
+        "rank": "60,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "79",
+        "Premium": "570",
+        "CashBackBenefit": "504",
+        "TotalPremiums": "620"
+    },
+    {
+        "rank": "61,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "80",
+        "Premium": "575",
+        "CashBackBenefit": "512",
+        "TotalPremiums": "625"
+    },
+    {
+        "rank": "62,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "81",
+        "Premium": "580",
+        "CashBackBenefit": "520",
+        "TotalPremiums": "630"
+    },
+    {
+        "rank": "63,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "82",
+        "Premium": "585",
+        "CashBackBenefit": "528",
+        "TotalPremiums": "635"
+    },
+    {
+        "rank": "64,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "83",
+        "Premium": "590",
+        "CashBackBenefit": "536",
+        "TotalPremiums": "640"
+    },
+    {
+        "rank": "65,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "84",
+        "Premium": "595",
+        "CashBackBenefit": "544",
+        "TotalPremiums": "645"
+    },
+    {
+        "rank": "66,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "85",
+        "Premium": "600",
+        "CashBackBenefit": "552",
+        "TotalPremiums": "650"
+    },
+    {
+        "rank": "67,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "86",
+        "Premium": "605",
+        "CashBackBenefit": "560",
+        "TotalPremiums": "655"
+    },
+    {
+        "rank": "68,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "87",
+        "Premium": "610",
+        "CashBackBenefit": "568",
+        "TotalPremiums": "660"
+    },
+    {
+        "rank": "69,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "88",
+        "Premium": "615",
+        "CashBackBenefit": "576",
+        "TotalPremiums": "665"
+    },
+    {
+        "rank": "70,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "89",
+        "Premium": "620",
+        "CashBackBenefit": "584",
+        "TotalPremiums": "670"
+    },
+    {
+        "rank": "71,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "90",
+        "Premium": "625",
+        "CashBackBenefit": "592",
+        "TotalPremiums": "675"
+    },
+    {
+        "rank": "72,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "91",
+        "Premium": "630",
+        "CashBackBenefit": "600",
+        "TotalPremiums": "680"
+    },
+    {
+        "rank": "73,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "92",
+        "Premium": "635",
+        "CashBackBenefit": "608",
+        "TotalPremiums": "685"
+    },
+    {
+        "rank": "74,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "93",
+        "Premium": "640",
+        "CashBackBenefit": "616",
+        "TotalPremiums": "690"
+    },
+    {
+        "rank": "75,0",
+        "covertype": "family",
+        "cashbenefits": "R20 000,00",
+        "Age": "94",
+        "Premium": "645",
+        "CashBackBenefit": "624",
+        "TotalPremiums": "695"
+    },
+    {
+        "rank": "76,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "21",
+        "Premium": "279",
+        "CashBackBenefit": "45",
+        "TotalPremiums": "312"
+    },
+    {
+        "rank": "77,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "22",
+        "Premium": "304",
+        "CashBackBenefit": "54",
+        "TotalPremiums": "342"
+    },
+    {
+        "rank": "78,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "23",
+        "Premium": "329",
+        "CashBackBenefit": "63",
+        "TotalPremiums": "376"
+    },
+    {
+        "rank": "79,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "24",
+        "Premium": "354",
+        "CashBackBenefit": "72",
+        "TotalPremiums": "401"
+    },
+    {
+        "rank": "80,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "25",
+        "Premium": "379",
+        "CashBackBenefit": "81",
+        "TotalPremiums": "429"
+    },
+    {
+        "rank": "81,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "26",
+        "Premium": "404",
+        "CashBackBenefit": "90",
+        "TotalPremiums": "454"
+    },
+    {
+        "rank": "82,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "27",
+        "Premium": "429",
+        "CashBackBenefit": "99",
+        "TotalPremiums": "479"
+    },
+    {
+        "rank": "83,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "28",
+        "Premium": "454",
+        "CashBackBenefit": "108",
+        "TotalPremiums": "504"
+    },
+    {
+        "rank": "84,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "29",
+        "Premium": "479",
+        "CashBackBenefit": "117",
+        "TotalPremiums": "529"
+    },
+    {
+        "rank": "85,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "30",
+        "Premium": "504",
+        "CashBackBenefit": "126",
+        "TotalPremiums": "554"
+    },
+    {
+        "rank": "86,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "31",
+        "Premium": "529",
+        "CashBackBenefit": "135",
+        "TotalPremiums": "579"
+    },
+    {
+        "rank": "87,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "32",
+        "Premium": "554",
+        "CashBackBenefit": "144",
+        "TotalPremiums": "604"
+    },
+    {
+        "rank": "88,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "33",
+        "Premium": "579",
+        "CashBackBenefit": "153",
+        "TotalPremiums": "629"
+    },
+    {
+        "rank": "89,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "34",
+        "Premium": "604",
+        "CashBackBenefit": "162",
+        "TotalPremiums": "654"
+    },
+    {
+        "rank": "90,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "35",
+        "Premium": "629",
+        "CashBackBenefit": "171",
+        "TotalPremiums": "679"
+    },
+    {
+        "rank": "91,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "36",
+        "Premium": "654",
+        "CashBackBenefit": "180",
+        "TotalPremiums": "704"
+    },
+    {
+        "rank": "92,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "37",
+        "Premium": "679",
+        "CashBackBenefit": "189",
+        "TotalPremiums": "729"
+    },
+    {
+        "rank": "93,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "38",
+        "Premium": "704",
+        "CashBackBenefit": "198",
+        "TotalPremiums": "754"
+    },
+    {
+        "rank": "94,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "39",
+        "Premium": "729",
+        "CashBackBenefit": "207",
+        "TotalPremiums": "779"
+    },
+    {
+        "rank": "95,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "40",
+        "Premium": "754",
+        "CashBackBenefit": "216",
+        "TotalPremiums": "804"
+    },
+    {
+        "rank": "96,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "41",
+        "Premium": "779",
+        "CashBackBenefit": "225",
+        "TotalPremiums": "829"
+    },
+    {
+        "rank": "97,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "42",
+        "Premium": "804",
+        "CashBackBenefit": "234",
+        "TotalPremiums": "854"
+    },
+    {
+        "rank": "98,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "43",
+        "Premium": "829",
+        "CashBackBenefit": "243",
+        "TotalPremiums": "879"
+    },
+    {
+        "rank": "99,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "44",
+        "Premium": "854",
+        "CashBackBenefit": "252",
+        "TotalPremiums": "904"
+    },
+    {
+        "rank": "100,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "45",
+        "Premium": "879",
+        "CashBackBenefit": "261",
+        "TotalPremiums": "929"
+    },
+    {
+        "rank": "101,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "46",
+        "Premium": "904",
+        "CashBackBenefit": "270",
+        "TotalPremiums": "954"
+    },
+    {
+        "rank": "102,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "47",
+        "Premium": "929",
+        "CashBackBenefit": "279",
+        "TotalPremiums": "979"
+    },
+    {
+        "rank": "103,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "48",
+        "Premium": "954",
+        "CashBackBenefit": "288",
+        "TotalPremiums": "1004"
+    },
+    {
+        "rank": "104,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "49",
+        "Premium": "979",
+        "CashBackBenefit": "297",
+        "TotalPremiums": "1029"
+    },
+    {
+        "rank": "105,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "50",
+        "Premium": "1004",
+        "CashBackBenefit": "306",
+        "TotalPremiums": "1054"
+    },
+    {
+        "rank": "106,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "51",
+        "Premium": "1029",
+        "CashBackBenefit": "315",
+        "TotalPremiums": "1079"
+    },
+    {
+        "rank": "107,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "52",
+        "Premium": "1054",
+        "CashBackBenefit": "324",
+        "TotalPremiums": "1104"
+    },
+    {
+        "rank": "108,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "53",
+        "Premium": "1079",
+        "CashBackBenefit": "333",
+        "TotalPremiums": "1129"
+    },
+    {
+        "rank": "109,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "54",
+        "Premium": "1104",
+        "CashBackBenefit": "342",
+        "TotalPremiums": "1154"
+    },
+    {
+        "rank": "110,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "55",
+        "Premium": "1129",
+        "CashBackBenefit": "351",
+        "TotalPremiums": "1179"
+    },
+    {
+        "rank": "111,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "56",
+        "Premium": "1154",
+        "CashBackBenefit": "360",
+        "TotalPremiums": "1204"
+    },
+    {
+        "rank": "112,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "57",
+        "Premium": "1179",
+        "CashBackBenefit": "369",
+        "TotalPremiums": "1229"
+    },
+    {
+        "rank": "113,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "58",
+        "Premium": "1204",
+        "CashBackBenefit": "378",
+        "TotalPremiums": "1254"
+    },
+    {
+        "rank": "114,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "59",
+        "Premium": "1229",
+        "CashBackBenefit": "387",
+        "TotalPremiums": "1279"
+    },
+    {
+        "rank": "115,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "60",
+        "Premium": "1254",
+        "CashBackBenefit": "396",
+        "TotalPremiums": "1304"
+    },
+    {
+        "rank": "116,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "61",
+        "Premium": "1279",
+        "CashBackBenefit": "405",
+        "TotalPremiums": "1329"
+    },
+    {
+        "rank": "117,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "62",
+        "Premium": "1304",
+        "CashBackBenefit": "414",
+        "TotalPremiums": "1354"
+    },
+    {
+        "rank": "118,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "63",
+        "Premium": "1329",
+        "CashBackBenefit": "423",
+        "TotalPremiums": "1379"
+    },
+    {
+        "rank": "119,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "64",
+        "Premium": "1354",
+        "CashBackBenefit": "432",
+        "TotalPremiums": "1404"
+    },
+    {
+        "rank": "120,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "65",
+        "Premium": "1379",
+        "CashBackBenefit": "441",
+        "TotalPremiums": "1429"
+    },
+    {
+        "rank": "121,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "66",
+        "Premium": "1404",
+        "CashBackBenefit": "450",
+        "TotalPremiums": "1454"
+    },
+    {
+        "rank": "122,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "67",
+        "Premium": "1429",
+        "CashBackBenefit": "459",
+        "TotalPremiums": "1479"
+    },
+    {
+        "rank": "123,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "68",
+        "Premium": "1454",
+        "CashBackBenefit": "468",
+        "TotalPremiums": "1504"
+    },
+    {
+        "rank": "124,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "69",
+        "Premium": "1479",
+        "CashBackBenefit": "477",
+        "TotalPremiums": "1529"
+    },
+    {
+        "rank": "125,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "70",
+        "Premium": "1504",
+        "CashBackBenefit": "486",
+        "TotalPremiums": "1554"
+    },
+    {
+        "rank": "126,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "71",
+        "Premium": "1529",
+        "CashBackBenefit": "495",
+        "TotalPremiums": "1579"
+    },
+    {
+        "rank": "127,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "72",
+        "Premium": "1554",
+        "CashBackBenefit": "504",
+        "TotalPremiums": "1604"
+    },
+    {
+        "rank": "128,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "73",
+        "Premium": "1579",
+        "CashBackBenefit": "513",
+        "TotalPremiums": "1629"
+    },
+    {
+        "rank": "129,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "74",
+        "Premium": "1604",
+        "CashBackBenefit": "522",
+        "TotalPremiums": "1654"
+    },
+    {
+        "rank": "130,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "75",
+        "Premium": "1629",
+        "CashBackBenefit": "531",
+        "TotalPremiums": "1679"
+    },
+    {
+        "rank": "131,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "76",
+        "Premium": "1654",
+        "CashBackBenefit": "540",
+        "TotalPremiums": "1704"
+    },
+    {
+        "rank": "132,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "77",
+        "Premium": "1679",
+        "CashBackBenefit": "549",
+        "TotalPremiums": "1729"
+    },
+    {
+        "rank": "133,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "78",
+        "Premium": "1704",
+        "CashBackBenefit": "558",
+        "TotalPremiums": "1754"
+    },
+    {
+        "rank": "134,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "79",
+        "Premium": "1729",
+        "CashBackBenefit": "567",
+        "TotalPremiums": "1779"
+    },
+    {
+        "rank": "135,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "80",
+        "Premium": "1754",
+        "CashBackBenefit": "576",
+        "TotalPremiums": "1804"
+    },
+    {
+        "rank": "136,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "81",
+        "Premium": "1779",
+        "CashBackBenefit": "585",
+        "TotalPremiums": "1829"
+    },
+    {
+        "rank": "137,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "82",
+        "Premium": "1804",
+        "CashBackBenefit": "594",
+        "TotalPremiums": "1854"
+    },
+    {
+        "rank": "138,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "83",
+        "Premium": "1829",
+        "CashBackBenefit": "603",
+        "TotalPremiums": "1879"
+    },
+    {
+        "rank": "139,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "84",
+        "Premium": "1854",
+        "CashBackBenefit": "612",
+        "TotalPremiums": "1904"
+    },
+    {
+        "rank": "140,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "85",
+        "Premium": "1879",
+        "CashBackBenefit": "621",
+        "TotalPremiums": "1929"
+    },
+    {
+        "rank": "141,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "86",
+        "Premium": "1904",
+        "CashBackBenefit": "630",
+        "TotalPremiums": "1954"
+    },
+    {
+        "rank": "142,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "87",
+        "Premium": "1929",
+        "CashBackBenefit": "639",
+        "TotalPremiums": "1979"
+    },
+    {
+        "rank": "143,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "88",
+        "Premium": "1954",
+        "CashBackBenefit": "648",
+        "TotalPremiums": "2004"
+    },
+    {
+        "rank": "144,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "89",
+        "Premium": "1979",
+        "CashBackBenefit": "657",
+        "TotalPremiums": "2029"
+    },
+    {
+        "rank": "145,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "90",
+        "Premium": "2004",
+        "CashBackBenefit": "666",
+        "TotalPremiums": "2054"
+    },
+    {
+        "rank": "146,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "91",
+        "Premium": "2029",
+        "CashBackBenefit": "675",
+        "TotalPremiums": "2079"
+    },
+    {
+        "rank": "147,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "92",
+        "Premium": "2054",
+        "CashBackBenefit": "684",
+        "TotalPremiums": "2104"
+    },
+    {
+        "rank": "148,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "93",
+        "Premium": "2079",
+        "CashBackBenefit": "693",
+        "TotalPremiums": "2129"
+    },
+    {
+        "rank": "149,0",
+        "covertype": "family",
+        "cashbenefits": "R25 000,00",
+        "Age": "94",
+        "Premium": "2104",
+        "CashBackBenefit": "702",
+        "TotalPremiums": "2806"
+    },
+    {
+        "rank": "150,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "21",
+        "Premium": "325",
+        "CashBackBenefit": "66",
+        "TotalPremiums": "312"
+    },
+    {
+        "rank": "151,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "22",
+        "Premium": "350",
+        "CashBackBenefit": "78",
+        "TotalPremiums": "342"
+    },
+    {
+        "rank": "152,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "23",
+        "Premium": "375",
+        "CashBackBenefit": "90",
+        "TotalPremiums": "376"
+    },
+    {
+        "rank": "153,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "24",
+        "Premium": "400",
+        "CashBackBenefit": "102",
+        "TotalPremiums": "401"
+    },
+    {
+        "rank": "154,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "25",
+        "Premium": "425",
+        "CashBackBenefit": "114",
+        "TotalPremiums": "429"
+    },
+    {
+        "rank": "155,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "26",
+        "Premium": "450",
+        "CashBackBenefit": "126",
+        "TotalPremiums": "454"
+    },
+    {
+        "rank": "156,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "27",
+        "Premium": "475",
+        "CashBackBenefit": "138",
+        "TotalPremiums": "479"
+    },
+    {
+        "rank": "157,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "28",
+        "Premium": "500",
+        "CashBackBenefit": "150",
+        "TotalPremiums": "504"
+    },
+    {
+        "rank": "158,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "29",
+        "Premium": "525",
+        "CashBackBenefit": "162",
+        "TotalPremiums": "529"
+    },
+    {
+        "rank": "159,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "30",
+        "Premium": "550",
+        "CashBackBenefit": "174",
+        "TotalPremiums": "554"
+    },
+    {
+        "rank": "160,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "31",
+        "Premium": "575",
+        "CashBackBenefit": "186",
+        "TotalPremiums": "579"
+    },
+    {
+        "rank": "161,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "32",
+        "Premium": "600",
+        "CashBackBenefit": "198",
+        "TotalPremiums": "604"
+    },
+    {
+        "rank": "162,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "33",
+        "Premium": "625",
+        "CashBackBenefit": "210",
+        "TotalPremiums": "629"
+    },
+    {
+        "rank": "163,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "34",
+        "Premium": "650",
+        "CashBackBenefit": "222",
+        "TotalPremiums": "654"
+    },
+    {
+        "rank": "164,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "35",
+        "Premium": "675",
+        "CashBackBenefit": "234",
+        "TotalPremiums": "679"
+    },
+    {
+        "rank": "165,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "36",
+        "Premium": "700",
+        "CashBackBenefit": "246",
+        "TotalPremiums": "704"
+    },
+    {
+        "rank": "166,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "37",
+        "Premium": "725",
+        "CashBackBenefit": "258",
+        "TotalPremiums": "729"
+    },
+    {
+        "rank": "167,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "38",
+        "Premium": "750",
+        "CashBackBenefit": "270",
+        "TotalPremiums": "754"
+    },
+    {
+        "rank": "168,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "39",
+        "Premium": "775",
+        "CashBackBenefit": "282",
+        "TotalPremiums": "779"
+    },
+    {
+        "rank": "169,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "40",
+        "Premium": "800",
+        "CashBackBenefit": "294",
+        "TotalPremiums": "804"
+    },
+    {
+        "rank": "170,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "41",
+        "Premium": "825",
+        "CashBackBenefit": "306",
+        "TotalPremiums": "829"
+    },
+    {
+        "rank": "171,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "42",
+        "Premium": "850",
+        "CashBackBenefit": "318",
+        "TotalPremiums": "854"
+    },
+    {
+        "rank": "172,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "43",
+        "Premium": "875",
+        "CashBackBenefit": "330",
+        "TotalPremiums": "879"
+    },
+    {
+        "rank": "173,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "44",
+        "Premium": "900",
+        "CashBackBenefit": "342",
+        "TotalPremiums": "904"
+    },
+    {
+        "rank": "174,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "45",
+        "Premium": "925",
+        "CashBackBenefit": "354",
+        "TotalPremiums": "929"
+    },
+    {
+        "rank": "175,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "46",
+        "Premium": "950",
+        "CashBackBenefit": "366",
+        "TotalPremiums": "954"
+    },
+    {
+        "rank": "176,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "47",
+        "Premium": "975",
+        "CashBackBenefit": "378",
+        "TotalPremiums": "979"
+    },
+    {
+        "rank": "177,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "48",
+        "Premium": "1000",
+        "CashBackBenefit": "390",
+        "TotalPremiums": "1004"
+    },
+    {
+        "rank": "178,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "49",
+        "Premium": "1025",
+        "CashBackBenefit": "402",
+        "TotalPremiums": "1029"
+    },
+    {
+        "rank": "179,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "50",
+        "Premium": "1050",
+        "CashBackBenefit": "414",
+        "TotalPremiums": "1054"
+    },
+    {
+        "rank": "180,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "51",
+        "Premium": "1075",
+        "CashBackBenefit": "426",
+        "TotalPremiums": "1079"
+    },
+    {
+        "rank": "181,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "52",
+        "Premium": "1100",
+        "CashBackBenefit": "438",
+        "TotalPremiums": "1104"
+    },
+    {
+        "rank": "182,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "53",
+        "Premium": "1125",
+        "CashBackBenefit": "450",
+        "TotalPremiums": "1129"
+    },
+    {
+        "rank": "183,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "54",
+        "Premium": "1150",
+        "CashBackBenefit": "462",
+        "TotalPremiums": "1154"
+    },
+    {
+        "rank": "184,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "55",
+        "Premium": "1175",
+        "CashBackBenefit": "474",
+        "TotalPremiums": "1179"
+    },
+    {
+        "rank": "185,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "56",
+        "Premium": "1200",
+        "CashBackBenefit": "486",
+        "TotalPremiums": "1204"
+    },
+    {
+        "rank": "186,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "57",
+        "Premium": "1225",
+        "CashBackBenefit": "498",
+        "TotalPremiums": "1229"
+    },
+    {
+        "rank": "187,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "58",
+        "Premium": "1250",
+        "CashBackBenefit": "510",
+        "TotalPremiums": "1254"
+    },
+    {
+        "rank": "188,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "59",
+        "Premium": "1275",
+        "CashBackBenefit": "522",
+        "TotalPremiums": "1279"
+    },
+    {
+        "rank": "189,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "60",
+        "Premium": "1300",
+        "CashBackBenefit": "534",
+        "TotalPremiums": "1304"
+    },
+    {
+        "rank": "190,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "61",
+        "Premium": "1325",
+        "CashBackBenefit": "546",
+        "TotalPremiums": "1329"
+    },
+    {
+        "rank": "191,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "62",
+        "Premium": "1350",
+        "CashBackBenefit": "558",
+        "TotalPremiums": "1354"
+    },
+    {
+        "rank": "192,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "63",
+        "Premium": "1375",
+        "CashBackBenefit": "570",
+        "TotalPremiums": "1379"
+    },
+    {
+        "rank": "193,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "64",
+        "Premium": "1400",
+        "CashBackBenefit": "582",
+        "TotalPremiums": "1404"
+    },
+    {
+        "rank": "194,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "65",
+        "Premium": "1425",
+        "CashBackBenefit": "594",
+        "TotalPremiums": "1429"
+    },
+    {
+        "rank": "195,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "66",
+        "Premium": "1450",
+        "CashBackBenefit": "606",
+        "TotalPremiums": "1454"
+    },
+    {
+        "rank": "196,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "67",
+        "Premium": "1475",
+        "CashBackBenefit": "618",
+        "TotalPremiums": "1479"
+    },
+    {
+        "rank": "197,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "68",
+        "Premium": "1500",
+        "CashBackBenefit": "630",
+        "TotalPremiums": "1504"
+    },
+    {
+        "rank": "198,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "69",
+        "Premium": "1525",
+        "CashBackBenefit": "642",
+        "TotalPremiums": "1529"
+    },
+    {
+        "rank": "199,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "70",
+        "Premium": "1550",
+        "CashBackBenefit": "654",
+        "TotalPremiums": "1554"
+    },
+    {
+        "rank": "200,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "71",
+        "Premium": "1575",
+        "CashBackBenefit": "666",
+        "TotalPremiums": "1579"
+    },
+    {
+        "rank": "201,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "72",
+        "Premium": "1600",
+        "CashBackBenefit": "678",
+        "TotalPremiums": "1604"
+    },
+    {
+        "rank": "202,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "73",
+        "Premium": "1625",
+        "CashBackBenefit": "690",
+        "TotalPremiums": "1629"
+    },
+    {
+        "rank": "203,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "74",
+        "Premium": "1650",
+        "CashBackBenefit": "702",
+        "TotalPremiums": "1654"
+    },
+    {
+        "rank": "204,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "75",
+        "Premium": "1675",
+        "CashBackBenefit": "714",
+        "TotalPremiums": "1679"
+    },
+    {
+        "rank": "205,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "76",
+        "Premium": "1700",
+        "CashBackBenefit": "726",
+        "TotalPremiums": "1704"
+    },
+    {
+        "rank": "206,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "77",
+        "Premium": "1725",
+        "CashBackBenefit": "738",
+        "TotalPremiums": "1729"
+    },
+    {
+        "rank": "207,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "78",
+        "Premium": "1750",
+        "CashBackBenefit": "750",
+        "TotalPremiums": "1754"
+    },
+    {
+        "rank": "208,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "79",
+        "Premium": "1775",
+        "CashBackBenefit": "762",
+        "TotalPremiums": "1779"
+    },
+    {
+        "rank": "209,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "80",
+        "Premium": "1800",
+        "CashBackBenefit": "774",
+        "TotalPremiums": "1804"
+    },
+    {
+        "rank": "210,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "81",
+        "Premium": "1825",
+        "CashBackBenefit": "786",
+        "TotalPremiums": "1829"
+    },
+    {
+        "rank": "211,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "82",
+        "Premium": "1850",
+        "CashBackBenefit": "798",
+        "TotalPremiums": "1854"
+    },
+    {
+        "rank": "212,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "83",
+        "Premium": "1875",
+        "CashBackBenefit": "810",
+        "TotalPremiums": "1879"
+    },
+    {
+        "rank": "213,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "84",
+        "Premium": "1900",
+        "CashBackBenefit": "822",
+        "TotalPremiums": "1904"
+    },
+    {
+        "rank": "214,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "85",
+        "Premium": "1925",
+        "CashBackBenefit": "834",
+        "TotalPremiums": "1929"
+    },
+    {
+        "rank": "215,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "86",
+        "Premium": "1950",
+        "CashBackBenefit": "846",
+        "TotalPremiums": "1954"
+    },
+    {
+        "rank": "216,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "87",
+        "Premium": "1975",
+        "CashBackBenefit": "858",
+        "TotalPremiums": "1979"
+    },
+    {
+        "rank": "217,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "88",
+        "Premium": "2000",
+        "CashBackBenefit": "870",
+        "TotalPremiums": "2004"
+    },
+    {
+        "rank": "218,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "89",
+        "Premium": "2025",
+        "CashBackBenefit": "882",
+        "TotalPremiums": "2029"
+    },
+    {
+        "rank": "219,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "90",
+        "Premium": "2050",
+        "CashBackBenefit": "894",
+        "TotalPremiums": "2054"
+    },
+    {
+        "rank": "220,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "91",
+        "Premium": "2075",
+        "CashBackBenefit": "906",
+        "TotalPremiums": "2079"
+    },
+    {
+        "rank": "221,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "92",
+        "Premium": "2100",
+        "CashBackBenefit": "918",
+        "TotalPremiums": "2104"
+    },
+    {
+        "rank": "222,0",
+        "covertype": "family",
+        "cashbenefits": "R30 000,00",
+        "Age": "93",
+        "Premium": "2125",
+        "CashBackBenefit": "930",
+        "TotalPremiums": "2129"
+    },
+    {
+        "rank": "223,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "20",
+        "Premium": "350",
+        "CashBackBenefit": "32",
+        "TotalPremiums": "307"
+    },
+    {
+        "rank": "224,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "21",
+        "Premium": "375",
+        "CashBackBenefit": "40",
+        "TotalPremiums": "315"
+    },
+    {
+        "rank": "225,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "22",
+        "Premium": "400",
+        "CashBackBenefit": "48",
+        "TotalPremiums": "327"
+    },
+    {
+        "rank": "226,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "23",
+        "Premium": "425",
+        "CashBackBenefit": "56",
+        "TotalPremiums": "338"
+    },
+    {
+        "rank": "227,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "24",
+        "Premium": "450",
+        "CashBackBenefit": "64",
+        "TotalPremiums": "345"
+    },
+    {
+        "rank": "228,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "25",
+        "Premium": "475",
+        "CashBackBenefit": "72",
+        "TotalPremiums": "350"
+    },
+    {
+        "rank": "229,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "26",
+        "Premium": "500",
+        "CashBackBenefit": "80",
+        "TotalPremiums": "355"
+    },
+    {
+        "rank": "230,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "27",
+        "Premium": "525",
+        "CashBackBenefit": "88",
+        "TotalPremiums": "360"
+    },
+    {
+        "rank": "231,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "28",
+        "Premium": "550",
+        "CashBackBenefit": "96",
+        "TotalPremiums": "365"
+    },
+    {
+        "rank": "232,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "29",
+        "Premium": "575",
+        "CashBackBenefit": "104",
+        "TotalPremiums": "370"
+    },
+    {
+        "rank": "233,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "30",
+        "Premium": "600",
+        "CashBackBenefit": "112",
+        "TotalPremiums": "375"
+    },
+    {
+        "rank": "234,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "31",
+        "Premium": "625",
+        "CashBackBenefit": "120",
+        "TotalPremiums": "380"
+    },
+    {
+        "rank": "235,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "32",
+        "Premium": "650",
+        "CashBackBenefit": "128",
+        "TotalPremiums": "385"
+    },
+    {
+        "rank": "236,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "33",
+        "Premium": "675",
+        "CashBackBenefit": "136",
+        "TotalPremiums": "390"
+    },
+    {
+        "rank": "237,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "34",
+        "Premium": "700",
+        "CashBackBenefit": "144",
+        "TotalPremiums": "395"
+    },
+    {
+        "rank": "238,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "35",
+        "Premium": "725",
+        "CashBackBenefit": "152",
+        "TotalPremiums": "400"
+    },
+    {
+        "rank": "239,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "36",
+        "Premium": "750",
+        "CashBackBenefit": "160",
+        "TotalPremiums": "405"
+    },
+    {
+        "rank": "240,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "37",
+        "Premium": "775",
+        "CashBackBenefit": "168",
+        "TotalPremiums": "410"
+    },
+    {
+        "rank": "241,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "38",
+        "Premium": "800",
+        "CashBackBenefit": "176",
+        "TotalPremiums": "415"
+    },
+    {
+        "rank": "242,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "39",
+        "Premium": "825",
+        "CashBackBenefit": "184",
+        "TotalPremiums": "420"
+    },
+    {
+        "rank": "243,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "40",
+        "Premium": "850",
+        "CashBackBenefit": "192",
+        "TotalPremiums": "425"
+    },
+    {
+        "rank": "244,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "41",
+        "Premium": "875",
+        "CashBackBenefit": "200",
+        "TotalPremiums": "430"
+    },
+    {
+        "rank": "245,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "42",
+        "Premium": "900",
+        "CashBackBenefit": "208",
+        "TotalPremiums": "435"
+    },
+    {
+        "rank": "246,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "43",
+        "Premium": "925",
+        "CashBackBenefit": "216",
+        "TotalPremiums": "440"
+    },
+    {
+        "rank": "247,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "44",
+        "Premium": "950",
+        "CashBackBenefit": "224",
+        "TotalPremiums": "445"
+    },
+    {
+        "rank": "248,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "45",
+        "Premium": "975",
+        "CashBackBenefit": "232",
+        "TotalPremiums": "450"
+    },
+    {
+        "rank": "249,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "46",
+        "Premium": "1000",
+        "CashBackBenefit": "240",
+        "TotalPremiums": "455"
+    },
+    {
+        "rank": "250,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "47",
+        "Premium": "1025",
+        "CashBackBenefit": "248",
+        "TotalPremiums": "460"
+    },
+    {
+        "rank": "251,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "48",
+        "Premium": "1050",
+        "CashBackBenefit": "256",
+        "TotalPremiums": "465"
+    },
+    {
+        "rank": "252,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "49",
+        "Premium": "1075",
+        "CashBackBenefit": "264",
+        "TotalPremiums": "470"
+    },
+    {
+        "rank": "253,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "50",
+        "Premium": "1100",
+        "CashBackBenefit": "272",
+        "TotalPremiums": "475"
+    },
+    {
+        "rank": "254,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "51",
+        "Premium": "1125",
+        "CashBackBenefit": "280",
+        "TotalPremiums": "480"
+    },
+    {
+        "rank": "255,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "52",
+        "Premium": "1150",
+        "CashBackBenefit": "288",
+        "TotalPremiums": "485"
+    },
+    {
+        "rank": "256,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "53",
+        "Premium": "1175",
+        "CashBackBenefit": "296",
+        "TotalPremiums": "490"
+    },
+    {
+        "rank": "257,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "54",
+        "Premium": "1200",
+        "CashBackBenefit": "304",
+        "TotalPremiums": "495"
+    },
+    {
+        "rank": "258,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "55",
+        "Premium": "1225",
+        "CashBackBenefit": "312",
+        "TotalPremiums": "500"
+    },
+    {
+        "rank": "259,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "56",
+        "Premium": "1250",
+        "CashBackBenefit": "320",
+        "TotalPremiums": "505"
+    },
+    {
+        "rank": "260,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "57",
+        "Premium": "1275",
+        "CashBackBenefit": "328",
+        "TotalPremiums": "510"
+    },
+    {
+        "rank": "261,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "58",
+        "Premium": "1300",
+        "CashBackBenefit": "336",
+        "TotalPremiums": "515"
+    },
+    {
+        "rank": "262,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "59",
+        "Premium": "1325",
+        "CashBackBenefit": "344",
+        "TotalPremiums": "520"
+    },
+    {
+        "rank": "263,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "60",
+        "Premium": "1350",
+        "CashBackBenefit": "352",
+        "TotalPremiums": "525"
+    },
+    {
+        "rank": "264,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "61",
+        "Premium": "1375",
+        "CashBackBenefit": "360",
+        "TotalPremiums": "530"
+    },
+    {
+        "rank": "265,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "62",
+        "Premium": "1400",
+        "CashBackBenefit": "368",
+        "TotalPremiums": "535"
+    },
+    {
+        "rank": "266,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "63",
+        "Premium": "1425",
+        "CashBackBenefit": "376",
+        "TotalPremiums": "540"
+    },
+    {
+        "rank": "267,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "64",
+        "Premium": "1450",
+        "CashBackBenefit": "384",
+        "TotalPremiums": "545"
+    },
+    {
+        "rank": "268,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "65",
+        "Premium": "1475",
+        "CashBackBenefit": "392",
+        "TotalPremiums": "550"
+    },
+    {
+        "rank": "269,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "66",
+        "Premium": "1500",
+        "CashBackBenefit": "400",
+        "TotalPremiums": "555"
+    },
+    {
+        "rank": "270,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "67",
+        "Premium": "1525",
+        "CashBackBenefit": "408",
+        "TotalPremiums": "560"
+    },
+    {
+        "rank": "271,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "68",
+        "Premium": "1550",
+        "CashBackBenefit": "416",
+        "TotalPremiums": "565"
+    },
+    {
+        "rank": "272,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "69",
+        "Premium": "1575",
+        "CashBackBenefit": "424",
+        "TotalPremiums": "570"
+    },
+    {
+        "rank": "273,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "70",
+        "Premium": "1600",
+        "CashBackBenefit": "432",
+        "TotalPremiums": "575"
+    },
+    {
+        "rank": "274,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "71",
+        "Premium": "1625",
+        "CashBackBenefit": "440",
+        "TotalPremiums": "580"
+    },
+    {
+        "rank": "275,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "72",
+        "Premium": "1650",
+        "CashBackBenefit": "448",
+        "TotalPremiums": "585"
+    },
+    {
+        "rank": "276,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "73",
+        "Premium": "1675",
+        "CashBackBenefit": "456",
+        "TotalPremiums": "590"
+    },
+    {
+        "rank": "277,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "74",
+        "Premium": "1700",
+        "CashBackBenefit": "464",
+        "TotalPremiums": "595"
+    },
+    {
+        "rank": "278,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "75",
+        "Premium": "1725",
+        "CashBackBenefit": "472",
+        "TotalPremiums": "600"
+    },
+    {
+        "rank": "279,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "76",
+        "Premium": "1750",
+        "CashBackBenefit": "480",
+        "TotalPremiums": "605"
+    },
+    {
+        "rank": "280,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "77",
+        "Premium": "1775",
+        "CashBackBenefit": "488",
+        "TotalPremiums": "610"
+    },
+    {
+        "rank": "281,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "78",
+        "Premium": "1800",
+        "CashBackBenefit": "496",
+        "TotalPremiums": "615"
+    },
+    {
+        "rank": "282,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "79",
+        "Premium": "1825",
+        "CashBackBenefit": "504",
+        "TotalPremiums": "620"
+    },
+    {
+        "rank": "283,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "80",
+        "Premium": "1850",
+        "CashBackBenefit": "512",
+        "TotalPremiums": "625"
+    },
+    {
+        "rank": "284,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "81",
+        "Premium": "1875",
+        "CashBackBenefit": "520",
+        "TotalPremiums": "630"
+    },
+    {
+        "rank": "285,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "82",
+        "Premium": "1900",
+        "CashBackBenefit": "528",
+        "TotalPremiums": "635"
+    },
+    {
+        "rank": "286,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "83",
+        "Premium": "1925",
+        "CashBackBenefit": "536",
+        "TotalPremiums": "640"
+    },
+    {
+        "rank": "287,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "84",
+        "Premium": "1950",
+        "CashBackBenefit": "544",
+        "TotalPremiums": "645"
+    },
+    {
+        "rank": "288,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "85",
+        "Premium": "1975",
+        "CashBackBenefit": "552",
+        "TotalPremiums": "650"
+    },
+    {
+        "rank": "289,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "86",
+        "Premium": "2000",
+        "CashBackBenefit": "560",
+        "TotalPremiums": "655"
+    },
+    {
+        "rank": "290,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "87",
+        "Premium": "2025",
+        "CashBackBenefit": "568",
+        "TotalPremiums": "660"
+    },
+    {
+        "rank": "291,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "88",
+        "Premium": "2050",
+        "CashBackBenefit": "576",
+        "TotalPremiums": "665"
+    },
+    {
+        "rank": "292,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "89",
+        "Premium": "2075",
+        "CashBackBenefit": "584",
+        "TotalPremiums": "670"
+    },
+    {
+        "rank": "293,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "90",
+        "Premium": "2100",
+        "CashBackBenefit": "592",
+        "TotalPremiums": "675"
+    },
+    {
+        "rank": "294,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "91",
+        "Premium": "2125",
+        "CashBackBenefit": "600",
+        "TotalPremiums": "680"
+    },
+    {
+        "rank": "295,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "92",
+        "Premium": "2150",
+        "CashBackBenefit": "608",
+        "TotalPremiums": "685"
+    },
+    {
+        "rank": "296,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "93",
+        "Premium": "2175",
+        "CashBackBenefit": "616",
+        "TotalPremiums": "690"
+    },
+    {
+        "rank": "297,0",
+        "covertype": "family",
+        "cashbenefits": "R35 000,00",
+        "Age": "94",
+        "Premium": "2200",
+        "CashBackBenefit": "624",
+        "TotalPremiums": "695"
+    }
+];
 
   $scope.master = {
 firstName: "", 
